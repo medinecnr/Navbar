@@ -1,4 +1,4 @@
-/*=============== SHOW MENU ===============*/
+
 const navToggle = document.getElementById('navbar_toggle');
 const navMenu = document.getElementById('navbar_menu');
 
@@ -14,8 +14,6 @@ const showOrHideMenu = () =>{
     navToggle.classList.toggle('show-icon');
 
 }
-
-/*=============== SHOW DROPDOWN MENU ===============*/
 const dropdownItems = document.querySelectorAll('.dropdown__item');
 
 dropdownItems.forEach((item) =>{
@@ -47,11 +45,9 @@ const toggleItem = (item) =>{
     }
 }
 
-/*=============== DELETE DROPDOWN STYLES ===============*/
 const mediaQuery = matchMedia('(min-width: 1118px)');
 const dropdownContainer = document.querySelectorAll('.dropdown__container');
 
-// Function to remove dropdown styles in mobile mode when browser resizes
 const removeStyle = () =>{
     if(mediaQuery.matches){
     
@@ -67,7 +63,6 @@ const removeStyle = () =>{
 
 addEventListener('resize', removeStyle);
 
-/*=============== SHOW SEARCH BAR & ACCOUNT ===============*/
 const searchIcon = document.getElementById("navbar_search_icon");
 const searchDropdown = document.getElementById("navbar_search_dropdown");
 const accountIcon = document.getElementById("navbar_account_icon");
@@ -88,7 +83,6 @@ const showOrHideDropdown = (icon, item)=> {
 showOrHideDropdown(searchIcon, searchDropdown);
 showOrHideDropdown(accountIcon, accountDropdown);
 
-// hide search & account dropdown when navbar_menu is hovered
 navMenu.addEventListener("mouseover", ()=> {
     accountDropdown.className = 'hide_dropdown';
     searchDropdown.className = 'hide_dropdown';
